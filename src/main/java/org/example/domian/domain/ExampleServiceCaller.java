@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
  *   can result in different behaviour when things are falling apart.
  */
 @AllArgsConstructor
-public class ExampleStatsPerformServiceCaller {
+public class ExampleServiceCaller {
 
   private final String url;
   private final RestTemplate restTemplate;

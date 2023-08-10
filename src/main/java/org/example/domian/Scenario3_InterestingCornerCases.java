@@ -2,7 +2,7 @@ package org.example.domian;
 
 import lombok.extern.log4j.Log4j2;
 import org.example.domian.domain.CustomRestTemplateErrorHandler;
-import org.example.domian.domain.ExampleStatsPerformServiceCaller;
+import org.example.domian.domain.ExampleServiceCaller;
 import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
@@ -24,7 +24,7 @@ public class Scenario3_InterestingCornerCases {
     RestTemplate restTemplate = new RestTemplate();
     restTemplate.setErrorHandler(new CustomRestTemplateErrorHandler());
 
-    var caller = new ExampleStatsPerformServiceCaller(notARealHost, restTemplate);
+    var caller = new ExampleServiceCaller(notARealHost, restTemplate);
     log.info("Our Response was: {}\n", caller.makeRequest());
   }
 

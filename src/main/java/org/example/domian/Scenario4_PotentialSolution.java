@@ -1,7 +1,7 @@
 package org.example.domian;
 
 import lombok.extern.log4j.Log4j2;
-import org.example.domian.domain.ExampleStatsPerformServiceCaller;
+import org.example.domian.domain.ExampleServiceCaller;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
@@ -20,7 +20,7 @@ public class Scenario4_PotentialSolution {
     String notARealUrl = "https://www.statsperform.com/midget";
     RestTemplate restTemplate = new RestTemplate();
 
-    var caller = new ExampleStatsPerformServiceCaller(notARealUrl, restTemplate);
+    var caller = new ExampleServiceCaller(notARealUrl, restTemplate);
 
     HttpStatus response = null;
     try {
